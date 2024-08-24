@@ -1,0 +1,100 @@
+   .container {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 5px 10px;
+  }
+  
+  .toolItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  }
+  
+  .toolItem:hover {
+    background-color: #f0f0f0;
+    color: #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .toolItem.active {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .toolItem .toolName {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10;
+  }
+  
+  .toolItem:hover .toolName {
+    display: block;
+  }
+  
+
+
+  /* Media Queries */
+@media (max-width: 1200px) {
+  .toolItem {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+
+  .toolItem .toolName {
+    top: 55px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 992px) {
+  .toolItem {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .toolItem .toolName {
+    top: 50px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .toolItem {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .toolItem .toolName {
+    top: 45px;
+    font-size: 9px;
+  }
+}

@@ -1,0 +1,204 @@
+/* Base Styles */
+.container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: #f9f9f9;
+  padding: 15px;
+  width: 130px;
+}
+
+.selectOptionContainer {
+  margin-bottom: 20px;
+}
+
+.toolBoxLabel {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.colorsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.colorBox {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.noFillColorBox {
+  background: linear-gradient(
+      to top left,
+      rgba(255, 0, 0, 0) 0%,
+      rgba(255, 0, 0, 0) calc(50% - 1px),
+      rgba(255, 0, 0, 1) 50%,
+      rgba(255, 0, 0, 0) calc(50% + 1px),
+      rgba(255, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to top right,
+      rgba(255, 0, 0, 0) 0%,
+      rgba(255, 0, 0, 0) calc(50% - 1px),
+      rgba(255, 0, 0, 1) 50%,
+      rgba(255, 0, 0, 0) calc(50% + 1px),
+      rgba(255, 0, 0, 0) 100%
+    );
+}
+
+.activeColorBox {
+  border: 2px solid #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+.colorPicker {
+  margin-right: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #050303;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.colorPicker:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+}
+
+.strokeWidthContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.strokeWidthBox {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #040404;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.strokeWidthBox.active {
+  background-color: #007bff;
+  border-color: #0b0b0b;
+}
+
+.strokeWidthBox:hover {
+  background-color: #f0f0f0;
+  border-color: #007bff;
+}
+
+.sizeOptionsContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.sizeOption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 5px solid #0a0a0a;
+  transition: border 0.3s, transform 0.3s;
+}
+
+.activeSizeOption {
+  border: 3px solid #703de7;
+  transform: scale(1.2);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .container {
+    width: 180px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 160px;
+    padding: 10px;
+  }
+
+  .selectOptionContainer {
+    margin-bottom: 15px;
+  }
+
+  .toolBoxLabel {
+    margin-bottom: 8px;
+  }
+
+  .colorsContainer {
+    gap: 8px;
+  }
+
+  .colorBox {
+    width: 28px;
+    height: 28px;
+  }
+
+  .colorPicker {
+    width: 40px;
+    height: 40px;
+  }
+
+  .strokeWidthBox {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 140px;
+    padding: 8px;
+  }
+
+  .selectOptionContainer {
+    margin-bottom: 12px;
+  }
+
+  .toolBoxLabel {
+    margin-bottom: 6px;
+  }
+
+  .colorsContainer {
+    gap: 6px;
+  }
+
+  .colorBox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .colorPicker {
+    width: 36px;
+    height: 36px;
+  }
+
+  .strokeWidthBox {
+    width: 24px;
+    height: 24px;
+  }
+}
